@@ -1,8 +1,35 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>CustomeTable</groupId>
+  <groupId>com.github.CustomeTable</groupId>
   <artifactId>CustomeTable</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+
+  <name>Custome Table</name>
+  <description>Custome Table Customization.</description>
+  <url>https://github.com/basantditstek/CustomeTable</url>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Basant Ditstek</name>
+      <email>basant.kumar@ditstek.com</email>
+      <organization>com.github</organization>
+      <organizationUrl>https://github.com/basantditstek/</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/basantditstek/CustomeTable.git</connection>
+    <developerConnection>scm:git:ssh://github.com:basantditstek/CustomeTable.git</developerConnection>
+    <url>http://github.com/simpligility/basantditstek/CustomeTable</url>
+  </scm>
+
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
