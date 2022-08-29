@@ -1,0 +1,5 @@
+package custome.table;
+
+public class ColumnNameException {
+
+}

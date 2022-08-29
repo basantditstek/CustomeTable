@@ -1,0 +1,154 @@
+package custome.table;
+
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import javax.swing.*;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import javax.swing.event.*;
+import javax.swing.table.*;
+public class CustomTable extends JFrame {
+   private JTextField jtf;
+   private JLabel searchLbl;
+   private DefaultTableModel model;
+   private JTable table;
+   private TableRowSorter sorter;
+   private JScrollPane jsp;
+   public CustomTable(String[] searchData,String[] columnNamesPrintData,Object[][] data) 
+   {
+      setTitle("JTableSearch Test");
+      jtf = new JTextField(15);
+      searchLbl = new JLabel("Search");
+     
+      HashMap<String,Integer> columns = new HashMap<String,Integer>();
+      columns.put("Name",0);
+      columns.put("Technology",1);
+      columns.put("Exp", 2);
+      columns.put("Version",3);
+      
+      
+      String[] search = searchData;
+     
+      String[] columnNamesPrint = columnNamesPrintData;
+      
+      Object[][] rowData = data;
+      
+      
+      ArrayList searchIndex = new ArrayList();
+      for(int i=0;i<search.length;i++)
+      {
+          String name=search[i];
+          for(int j=0;j<columnNamesPrint.length;j++)
+          {
+              
+              if(name.equals(columnNamesPrint[j]))
+              {
+                  searchIndex.add(j);
+              }
+          }
+          
+      }
+      System.out.println(searchIndex);
+     
+      
+      int a[]=new int[searchIndex.size()];
+      
+      for(int i=0;i<a.length;i++)
+      {
+          a[i]=(int)searchIndex.get(i);
+      }
+      
+     
+     
+      
+       ArrayList<Object[]> newData=new ArrayList<Object[]>();
+           for(Object[] ss:rowData)
+           {
+               
+              Object[] s=ss;
+              for(Object k:s)
+              {
+                  Object[] render=new Object[s.length];
+                  for(int i=0;i<columnNamesPrint.length;i++)
+                  {
+                      render[i]=(String)s[columns.get(columnNamesPrint[i])];
+                      
+                  }
+                  newData.add(render);
+                  break;
+                  
+              }
+               
+           }
+           
+     /*      
+           for(Object[] kk:newData)
+           {
+               System.out.println(Arrays.deepToString(kk));
+           }
+            
+     */ 
+      
+      Object[][] newRowData=new Object[newData.size()][];
+       int k=0;
+           for(Object[] kk:newData)
+           {
+               Object s=Arrays.deepToString(kk);
+               newRowData[k++]=new Object[]{s};
+           }
+      model = new DefaultTableModel();
+      for(int i=0;i<columnNamesPrint.length;i++)
+      {
+          model.addColumn(columnNamesPrint[i]);
+      }
+      for(Object[] kk:newData)
+      {
+           model.addRow(kk);
+           
+      }
+     
+      sorter = new TableRowSorter<>(model);
+      table = new JTable(model);
+      table.setRowSorter(sorter);
+      setLayout(new FlowLayout(FlowLayout.CENTER));
+      jsp = new JScrollPane(table);
+      
+      add(searchLbl);
+      add(jtf);
+      add(jsp);
+      jtf.getDocument().addDocumentListener(new DocumentListener() {
+         @Override
+         public void insertUpdate(DocumentEvent e) {
+            search(jtf.getText());
+         }
+         @Override
+         public void removeUpdate(DocumentEvent e) {
+            search(jtf.getText());
+         }
+         @Override
+         public void changedUpdate(DocumentEvent e) {
+            search(jtf.getText());
+         }
+         public void search(String str) {
+            if (str.length() == 0) 
+            {
+               sorter.setRowFilter(null);
+            } 
+            else 
+            {
+               
+               sorter.setRowFilter(RowFilter.regexFilter(str,a));
+            }
+         }
+      });
+      setSize(475, 300);
+      setDefaultCloseOperation(EXIT_ON_CLOSE);
+      setLocationRelativeTo(null);
+      setResizable(false);
+      setVisible(true);
+   }
+   
+}
+

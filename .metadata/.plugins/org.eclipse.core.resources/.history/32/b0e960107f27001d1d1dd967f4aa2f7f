@@ -1,0 +1,300 @@
+package custome.table;
+
+import java.awt.*;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import javax.swing.event.*;
+import javax.swing.table.*;
+public class CustomTable
+{
+    
+   private JTextField jtf;
+   private JLabel searchLbl;
+   private DefaultTableModel model;
+   private JTable table;
+   private TableRowSorter sorter;
+   private JScrollPane jsp;
+   
+   private JFrame f;
+   
+   // Table Data
+   private HashMap<String,Integer> columns;
+   private String[] search;
+   private String[] columnNamesPrint;
+   private Object[][] rowData;
+   
+   // Frame 
+   private String title;
+   private int frameHeight;
+   private int frameWidth;
+   private String imageName;
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
+
+    
+   
+   
+   
+   
+   
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public HashMap<String, Integer> getColumns() {
+        return columns;
+    }
+
+    public void setColumns(HashMap<String, Integer> columns) {
+        this.columns = columns;
+    }
+
+    public String[] getSearch() {
+        return search;
+    }
+
+    public void setSearch(String[] search) {
+        this.search = search;
+    }
+
+    public String[] getColumnNamesPrint() {
+        return columnNamesPrint;
+    }
+
+    public void setColumnNamesPrint(String[] columnNamesPrint) {
+        this.columnNamesPrint = columnNamesPrint;
+    }
+
+    public Object[][] getRowData() {
+        return rowData;
+    }
+
+    public void setRowData(Object[][] rowData) {
+        this.rowData = rowData;
+    }
+
+    public int getFrameHeight() {
+        return frameHeight;
+    }
+
+    public void setFrameHeight(int frameHeight) {
+        this.frameHeight = frameHeight;
+    }
+
+    public int getFrameWidth() {
+        return frameWidth;
+    }
+
+    public void setFrameWidth(int frameWidth) {
+        this.frameWidth = frameWidth;
+    }
+    
+    
+    
+    
+   
+   
+   public CustomTable()
+   {
+       if(title==null)
+       {
+           title="Custom Search Table";
+       }
+       if(columnNamesPrint==null)
+       {
+           columnNamesPrint=new String[]{};
+       }
+       
+       if(search==null)
+       {
+           search=new String[]{};
+       }
+       
+       if(rowData==null)
+       {
+           rowData=new Object[][]{};
+           //throw new RowDataException("Table Data not found. It cannot be empty");
+       }
+       
+       if(imageName==null)
+       {
+           imageName="hth_logo.png";
+       }
+   }
+   
+   public void drawTable()throws Exception
+   {
+     
+      f=new JFrame();
+      
+      f.setTitle(title);
+       
+      jtf = new JTextField(15);
+      searchLbl = new JLabel("Search");
+      model = new DefaultTableModel();
+      
+      ArrayList searchIndex = new ArrayList();
+      for(int i=0;i<search.length;i++)
+      {
+          String name=search[i];
+          for(int j=0;j<columnNamesPrint.length;j++)
+          {
+              
+              if(name.equals(columnNamesPrint[j]))
+              {
+                  searchIndex.add(j);
+              }
+          }
+          
+      }
+      System.out.println(searchIndex);
+     
+      
+      int a[]=new int[searchIndex.size()];
+      
+      for(int i=0;i<a.length;i++)
+      {
+          a[i]=(int)searchIndex.get(i);
+      }
+      
+      
+      if(columnNamesPrint.length==0)
+      {
+                String d[]=new String[columns.size()];
+                for(String key:columns.keySet())
+                {
+                    int index=columns.get(key);
+                    d[index]=key;
+                    
+                }
+          for(String s:d)
+          {
+              model.addColumn(s);
+          }
+          for(Object[] ss:rowData)
+          {
+              model.addRow(ss);
+          }
+      }
+      else
+      {
+       ArrayList<Object[]> newData=new ArrayList<Object[]>();
+           for(Object[] ss:rowData)
+           {
+               
+              Object[] s=ss;
+              for(Object k:s)
+              {
+                  Object[] render=new Object[s.length];
+                  for(int i=0;i<columnNamesPrint.length;i++)
+                  {
+                      if(columns.get(columnNamesPrint[i])==null)
+                      {
+                          throw new ColumnNameException("Column Name doesn't exists!");
+                      }
+                      render[i]=(String)s[columns.get(columnNamesPrint[i])];
+                      
+                  }
+                  newData.add(render);
+                  break;
+                  
+              }
+               
+           }
+           
+     
+      
+      Object[][] newRowData=new Object[newData.size()][];
+       int k=0;
+           for(Object[] kk:newData)
+           {
+               Object s=Arrays.deepToString(kk);
+               newRowData[k++]=new Object[]{s};
+           }
+      
+      for(int i=0;i<columnNamesPrint.length;i++)
+      {
+          model.addColumn(columnNamesPrint[i]);
+      }
+      for(Object[] kk:newData)
+      {
+           model.addRow(kk);
+           
+      }
+      }
+      sorter = new TableRowSorter<>(model);
+      table = new JTable(model);
+      table.setRowSorter(sorter);
+      f.setLayout(new FlowLayout(FlowLayout.CENTER));
+      jsp = new JScrollPane(table);
+      
+      f.add(searchLbl);
+      f.add(jtf);
+      f.add(jsp);
+      
+      if(search.length==0)
+      {
+          jtf.setVisible(false);
+          searchLbl.setVisible(false);
+      }
+      else
+      {
+          jtf.getDocument().addDocumentListener(new DocumentListener() {
+         @Override
+         public void insertUpdate(DocumentEvent e) {
+            search(jtf.getText());
+         }
+         @Override
+         public void removeUpdate(DocumentEvent e) {
+            search(jtf.getText());
+         }
+         @Override
+         public void changedUpdate(DocumentEvent e) {
+            search(jtf.getText());
+         }
+         public void search(String str) 
+         {
+            if (str.length() == 0) 
+            {
+               sorter.setRowFilter(null);
+            } 
+            else 
+            {
+               
+               sorter.setRowFilter(RowFilter.regexFilter(str,a));
+            }
+         }
+      });    
+      }
+      
+      
+      
+      f.setSize(frameWidth,frameHeight);
+      
+      URL path=CustomTable.class.getClassLoader().getResource("custome/table/images/"+imageName);
+      Image img=ImageIO.read(path);
+      
+      f.setIconImage(img);
+      f.setDefaultCloseOperation(EXIT_ON_CLOSE);
+      f.setLocationRelativeTo(null);
+      f.setResizable(true);
+      f.setVisible(true);
+   }
+   
+}

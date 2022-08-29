@@ -1,0 +1,26 @@
+
+
+package custome.table;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
+
+class TableSearch  
+{
+    
+    
+    public static void main(String[] args)
+    {
+       String search[]={"Technology","Version","Name"};
+       String columnNamesPrint[]= {"Technology","Exp","Name","Version"};
+       Object rowData[][]={{"Raja", "Java","5","7"},{"Vineet", "Java Script","3","2"},{"Archana", "Python","5","1"},{"Krishna", "Scala","8","8"},{"Adithya", "AWS","7","7"},{"Jai", ".Net","6","6"}};;
+       
+       new CustomTable(search,columnNamesPrint,rowData);
+    }
+}

@@ -1,0 +1,69 @@
+2022-07-06 14:52:15,522 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
+2022-07-06 14:52:35,850 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-07-06 16:12:03,406 [Worker-34: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-07-14 12:21:10,594 [Worker-40: https://download.eclipse.org/webtools/downloads/drops/R3.23.0/S-3.23.0.M3-20210822084517/repository/content.xml.xz] INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (java.net.SocketException) caught when processing request to {s}->https://download.eclipse.org:443
+2022-08-16 13:12:52,789 [Worker-19: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-08-16 13:13:02,920 [Worker-19: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2022-08-16 13:21:14,183 [Worker-29: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: CustomeTable:CustomeTable:0.0.1-SNAPSHOT @ C:\Users\ditsd\eclipse-workspace\CustomeTable\pom.xml.
+2022-08-16 13:21:14,816 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-16 13:21:14,817 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\main\resources
+2022-08-16 13:21:14,818 [Worker-31: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-16 13:21:14,819 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\test\resources
+2022-08-16 13:21:14,837 [Worker-29: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /CustomeTable/src
+2022-08-16 13:21:14,838 [Worker-29: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /CustomeTable/src/test/java because it overlaps with /CustomeTable/src
+2022-08-16 13:21:14,964 [Worker-29: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2022-08-16 13:21:15,169 [Worker-29: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: CustomeTable:CustomeTable:0.0.1-SNAPSHOT @ C:\Users\ditsd\eclipse-workspace\CustomeTable\pom.xml.
+2022-08-16 13:21:15,325 [Worker-29: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /CustomeTable/src
+2022-08-16 13:21:15,325 [Worker-29: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /CustomeTable/src/test/java because it overlaps with /CustomeTable/src
+2022-08-16 13:21:15,378 [Worker-29: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2022-08-16 13:21:15,910 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-16 13:21:15,912 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\main\resources
+2022-08-16 13:21:15,914 [Worker-30: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-16 13:21:15,914 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\test\resources
+2022-08-16 13:22:01,567 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2022-08-16 13:22:19,573 [Worker-3: Launching CustomeTable] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\ditsd\eclipse-workspace\CustomeTable
+2022-08-16 13:22:19,574 [Worker-3: Launching CustomeTable] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean package
+2022-08-24 16:11:31,599 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-08-24 16:26:27,842 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-08-29 15:12:23,127 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-08-29 15:12:39,727 [Worker-15: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:12:39,737 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\main\resources
+2022-08-29 15:12:39,740 [Worker-15: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:12:39,741 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\test\resources
+2022-08-29 15:13:16,652 [Worker-16: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:13:16,652 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\main\resources
+2022-08-29 15:13:16,652 [Worker-16: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:13:16,659 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\test\resources
+2022-08-29 15:13:23,974 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:13:23,975 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\main\resources
+2022-08-29 15:13:23,975 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:13:23,976 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\test\resources
+2022-08-29 15:13:40,900 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:13:40,902 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\main\resources
+2022-08-29 15:13:40,904 [Worker-27: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:13:40,905 [Worker-27: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\test\resources
+2022-08-29 15:13:54,083 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:13:54,083 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\main\resources
+2022-08-29 15:13:54,088 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:13:54,088 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\test\resources
+2022-08-29 15:15:15,568 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:15:15,569 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\main\resources
+2022-08-29 15:15:15,571 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:15:15,574 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\test\resources
+2022-08-29 15:15:34,863 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:15:34,865 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\main\resources
+2022-08-29 15:15:34,866 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:15:34,867 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\test\resources
+2022-08-29 15:16:05,227 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:16:05,227 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\main\resources
+2022-08-29 15:16:05,227 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 15:16:05,227 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\test\resources
+2022-08-29 15:20:16,739 [main] INFO  o.e.m2e.actions.ExecutePomAction - Using existing launch configuration
+2022-08-29 15:20:16,999 [Worker-10: Launching CustomeTable] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\ditsd\eclipse-workspace\CustomeTable
+2022-08-29 15:20:17,004 [Worker-10: Launching CustomeTable] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean package
+2022-08-29 16:24:35,920 [Worker-37: Launching Executing install in C__Users_ditsd_eclipse-workspace_CustomeTable] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\ditsd\eclipse-workspace\CustomeTable
+2022-08-29 16:24:35,920 [Worker-37: Launching Executing install in C__Users_ditsd_eclipse-workspace_CustomeTable] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2022-08-29 16:24:50,889 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 16:24:50,889 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\main\resources
+2022-08-29 16:24:50,892 [Worker-39: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-08-29 16:24:50,893 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\ditsd\eclipse-workspace\CustomeTable\src\test\resources
